@@ -1,22 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>HAI CANTIKNYA AKU </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Design BangDayy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #0077ff;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      background-color: #005bb5;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #003d7f;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .order-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .order-form input, .order-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .order-form button {
+      background-color: #0077ff;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .order-form button:hover {
+      background-color: #005bb5;
+    }
+    footer {
+      text-align: center;
+      padding: 7px;
+      background-color: #0077ff;
+      color: white;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>HAIII CANTIIKKKUUUU </h1>
-        <div id="image-container">
-            <img id="profile-image" src="ayang5.jpg" alt="Profil Kekasih">
-        </div>
-        <p id="gombalan-text">Kamu itu ayangkuu kamu udah cantik bangettt😘, jadi kamu ngga perlu dengerin kata orang-orang tentang kamu yaaa🫶🏻.</p>
-        <button onclick="generateGombalan()">Pencet Dong Ayy</button>
-    </div>
+  <!-- Header Section -->
+  <header>
+    <h1>3D Design BangDayy</h1>
+    <p>Semua Bisa di Buat 3D</p>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- Navigation -->
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#order">Order</a>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <div class="container">
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio">
+        <div class="portfolio-item">
+            <p>Custom Design</p>
+          <img src="https://i.pinimg.com/564x/e6/f8/b9/e6f8b9c850ed3a8007507893af2db6d4.jpg" alt="3D Model 1">
+          
+        </div>
+        <div class="portfolio-item">
+          <p>Architecture</p>
+          <img src="https://i.pinimg.com/564x/5c/09/61/5c09616a3e4e092fdb84d3ea14e001f6.jpg" alt="3D Model 2">
+          
+        </div>
+        <div class="portfolio-item">
+          <p>Product Design</p>
+          <img src="https://i.pinimg.com/originals/ac/f1/4e/acf14e847a0fdc122c40022b426bca5a.gif" alt="3D Model 3">
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+      <h2>Order 3D Desain</h2>
+      <div class="order-form">
+        <h2>Order</h2>
+        <form action="submit_order.php" method="post">
+          <input type="text" name="name" placeholder="Nama" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="details" rows="4" placeholder="Deskripsikan Ordean 3D mu " required></textarea>
+          <button type="submit">Submit Order</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>2024 3D Design Business</p>
+  </footer>
+
 </body>
 </html>
